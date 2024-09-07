@@ -6,7 +6,8 @@ DATA_FONT_SIZE = 18
 DATA_FONT_COLOR = (0, 0, 0)
 BG_FILENAME = r'assets/bg.png'
 
-PIPE_FILENAME = r'assets/pipe.png'
+PIPE_UPPER_FILENAME = r'assets/pipe_upper.png'
+PIPE_LOWER_FILENAME = r'assets/pipe_lower.png'
 PIPE_SPEED = 70/1000
 PIPE_DONE = 0
 PIPE_MOVING = 1

@@ -8,7 +8,10 @@ class Pipe():
         self.gameDisplay = gameDisplay
         self.pipe_type = pipe_type
         self.state = PIPE_MOVING
-        self.img = pygame.image.load(PIPE_FILENAME)
+        if pipe_type == PIPE_UPPER:
+            self.img = pygame.image.load(PIPE_UPPER_FILENAME)
+        else:
+            self.img = pygame.image.load(PIPE_LOWER_FILENAME)
         self.rect = self.img.get_rect() # Get rect reference
         if pipe_type == PIPE_UPPER:
             y = y - self.rect.height
