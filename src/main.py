@@ -46,8 +46,6 @@ def run_game():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
-            if event.type == pygame.KEYDOWN:
-                running = False
 
         pipes.update(dt)
         num_alive = birds.update(dt, pipes.pipesList)
@@ -55,7 +53,7 @@ def run_game():
         if num_alive == 0: # If the bird is dead, reset the game
             pipes.create_new_set()
             game_time = 0
-            birds.create_new_generation()
+            birds.evolve_population()
             num_iterations += 1
 
         update_data_labels(gameDisplay, dt, game_time, num_iterations, num_alive, label_font)
